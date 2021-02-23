@@ -1,12 +1,6 @@
-# toposort C++
+#include <iostream>
+#include <toposort.hpp>
 
-An easy to use topological sorting library for C++ with support for cyclic dependency checking.
-
-Requires either a C++11 compiler with make_shared support or a C++14 compiler.
-
-Usage:
-
-```cpp
 int main()
 {
   // Declare that our graph nodes hold chars as data.
@@ -54,4 +48,3 @@ int main()
     return 1;
   }
 }
-```
