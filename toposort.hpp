@@ -40,15 +40,16 @@ namespace toposort
  *
  * @param T The type of data a node inside the graph should store.
  */
-template <typename T, typename TVector = std::vector<T>> class graph
+template <typename T> class graph
 {
 public:
   class node;
 
   template <typename TN> using shared_ptr_t = std::shared_ptr<TN>;
+  template <typename TN> using vector_t     = std::vector<TN>;
 
   using node_ptr  = shared_ptr_t<node>;
-  using node_list = TVector<node_ptr>;
+  using node_list = vector_t<node_ptr>;
 
   /**
    * Represents a node inside a graph.
@@ -167,7 +168,7 @@ public:
 private:
   // For temporary lists, we can use raw pointers instead of copying
   // around shared pointers.
-  using node_ref_list = TVector<const node*>;
+  using node_ref_list = vector_t<const node*>;
 
   static bool visit(node_list& graph, node_ref_list& dead,
                     node_ref_list& pending, result& res)
