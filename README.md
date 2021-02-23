@@ -1,6 +1,6 @@
 # toposort C++
 
-An easy to use topological sorting library for C++ with support for cyclic dependency checking.
+An easy to use header-only topological sorting library for C++ with support for cyclic dependency checking.
 
 Requires either a C++11 compiler with make_shared support or a C++14 compiler.
 
