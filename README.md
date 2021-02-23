@@ -2,6 +2,8 @@
 
 An easy to use header-only topological sorting library for C++ with support for cyclic dependency checking.
 
+If you're looking for a C# version of this library, check it out [here](https://github.com/cemdervis/toposort-csharp).
+
 Requires either a C++11 compiler with make_shared support or a C++14 compiler.
 
 Usage:
